@@ -4,11 +4,98 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Survey</title>
+  <title>Friend Finder</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/survey.css" />
 </head>
 
 <body>
-  Survey!!
+  <div id="main">
+    <div></div>
+    <div class="top-links">
+      <a href="/api/friends">API Friends List</a>
+      |
+      <a href="https://github.com/jdolla/FriendFinder">Github Repo</a>
+    </div>
+    <div></div>
+    <div class="main-left"></div>
+    <div class="main-center-head">
+      <div class="head">
+        <img class="banner" src="/images/cartoon-1294010_1280.png" alt="" />
+        <h1>
+          <span class="friend">Friend</span>
+          <span class="finder">Finder</span>
+        </h1>
+      </div>
+    </div>
+    <div class="main-right"></div>
+    <div class="main-left"></div>
+    <div class="main-center">
+      <br/>
+      <br/>
+      <form action="submit" id="survey">
+        <div class="question-box">
+          <p>Garden gnomes should not swim in cereal.</p>
+        </div>
+        <div class="slider-box">
+          <p>1</p>
+          <input name="q1" type="range" min="1" max="5" value="3" step="1" class="slider" list="steps">
+          <p style="display: inline-block">5</p>
+        </div>
+
+
+        <div class="question-box">
+          <p>Really? Batman kills Superman? Superman!!??</p>
+        </div>
+        <div class="slider-box">
+          <p>1</p>
+          <input name="q2" type="range" min="1" max="5" value="3" step="1" class="slider" list="steps">
+          <p style="display: inline-block">5</p>
+        </div>
+
+        <div class="question-box">
+          <p>You really hate taking stupid quizzes.</p>
+        </div>
+        <div class="slider-box">
+          <p>1</p>
+          <input name="q2" type="range" min="1" max="5" value="3" step="1" class="slider" list="steps">
+          <p style="display: inline-block">5</p>
+        </div>
+
+        <div class="question-box">
+          <p>You're super glad there aren't actually 10 questions.</p>
+        </div>
+        <div class="slider-box">
+          <p>1</p>
+          <input name="q2" type="range" min="1" max="5" value="3" step="1" class="slider" list="steps">
+          <p style="display: inline-block">5</p>
+        </div>
+
+        <div class="question-box">
+          <p>The number one is your favorite number.</p>
+        </div>
+        <div class="slider-box">
+          <p>1</p>
+          <input name="q2" type="range" min="1" max="5" value="3" step="1" class="slider" list="steps">
+          <p style="display: inline-block">5</p>
+        </div>
+
+        <datalist id="steps">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist>
+        <div></div>
+        <div>
+          <button id="submit-questions">Submit</button>
+        </div>
+
+      </form>
+
+    </div>
+    <div class="main-right"></div>
+  </div>
 </body>
 
 </html>

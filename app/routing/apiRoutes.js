@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
+var friends = require('../data/friends');
+
 router.get('/friends', (req, res) => {
-  res.end('friens api');
+  res.json(friends);
 })
 
 router.post('/friends', (req, res) => {

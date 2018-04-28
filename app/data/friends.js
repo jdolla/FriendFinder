@@ -1,4 +1,4 @@
-var people = [
+var friends = [
   {
     name: "Kermit",
     image: "https://s3.amazonaws.com/southfloridareporter/wp-content/uploads/2017/07/12001843/kermit-1651325_1920.jpg",
@@ -11,7 +11,4 @@ var people = [
   }
 ]
 
-module.exports = {
-  questions,
-  people
-};
+module.exports = friends;
