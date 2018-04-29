@@ -1,4 +1,4 @@
-var friends = [
+let friends = [
   {
     name: "Kermit",
     image: "https://s3.amazonaws.com/southfloridareporter/wp-content/uploads/2017/07/12001843/kermit-1651325_1920.jpg",
@@ -11,4 +11,36 @@ var friends = [
   }
 ]
 
-module.exports = friends;
+let findFriend = function (newFriend) {
+  const nfAnswers = newFriend.answers;
+  let results = [];
+
+  for (let i = 0; i < friends.length; i++) {
+    const friend = friends[i];
+    const delta = friend.answers
+      .map((answer, index) => {
+        return Math.abs(answer - nfAnswers[index]);
+      })
+      .reduce((prior, current) => {
+        return prior + current;
+      });
+
+    results.push({index: i, delta});
+  }
+
+  let match = results.reduce( (prior, current) => {
+    if(prior.index < 0) { return current};
+    if( prior.delta < current.delta){
+      return prior;
+    }
+    return current;
+  }, {index: -1, delta: -1})
+
+  return friends[match.index];
+
+}
+
+module.exports = {
+  friends,
+  findFriend
+}
